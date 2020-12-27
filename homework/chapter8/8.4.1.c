@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-void main()
+// 看会了。qwq
+int main()
 {
     void move(int *p, int n, int m);
     int a[30];
@@ -19,12 +20,14 @@ void main()
     printf("input the m:\n");
     scanf("%d", &m);
 
-    p = a;
+    p = a; // 这里不可删除， 让p重新指向a[0]
 
     move(p, n, m);
 
     for (p = a; p < a + n;)
-        printf("%d", *p++);
+        printf("%d ", *p++);
+    putchar('\n');
+    return 0;
 }
 
 void move(int *p, int n, int m)
@@ -36,6 +39,9 @@ void move(int *p, int n, int m)
     }
     for (i = n; i < n + m; i++) //这个循环是把后面m个数移到最开始
     {
-        *p++ = *(p + n);
+        // *p++ = *(p + n); // *p++ 等价于 *(p++), 引用p的值实现*p运算， 然后再使p的值+1
+        *p = *(p + n);  // p一开始指向a[0]， 所以现在相当于p指向第一个数， 让第一个数的值先等于第10个数
+                            //然后第2个数的值等于第11个数，依次类推，直到移动的最后一个数为止。
+        p = p + 1;      
     }
 }

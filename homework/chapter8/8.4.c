@@ -26,7 +26,7 @@ int main()
 void Process(int *p, int num[])
 {
     int m, n, i;
-    int *t， *q;
+    int *t, *q;
     i = 0;
     m = 3;
     n = 20;
@@ -43,7 +43,7 @@ void Process(int *p, int num[])
     q = &num[2];
     num[2] = *t;
     // 第2个换到第5个；
-    t = num[5];
+    t = &num[5];
     num[5] = *q;
     // 第5个换到第8个；
     q = &num[8];
