@@ -1,5 +1,5 @@
 #include<stdio.h>
-// 每次移动一位，计算需要移动几次的方法
+// 每次向前移动一位，计算需要移动几次的方法。
 
 void exchange(int *, int, int);
 
