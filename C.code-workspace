@@ -35,6 +35,9 @@
 			".vsh": "v run",
 			".sass": "sass --style expanded",
 			".cu": "cd $dir && nvcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+		},
+		"files.associations": {
+			"iostream": "cpp"
 		}
 	}
 }
