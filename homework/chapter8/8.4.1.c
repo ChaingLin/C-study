@@ -1,4 +1,5 @@
 // copy学习
+// 有n个整数,使前面各数顺序向后移m个位置,最后 m个数变成最前面 m个数,写一个函数实现以上功能,在主函数中输入n个整数和输出调整后的n个数。
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
