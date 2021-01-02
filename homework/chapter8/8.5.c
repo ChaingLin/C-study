@@ -7,8 +7,10 @@ int main()
     void Process(int *, int m, int n);
     int n, m, i;
     int *p;
-    printf("请输入人数和报数：");
-    scanf("%d,%d", &n, &m);
+    printf("请输入人数：");
+    scanf("%d", &n);
+    printf("请输入报数：");
+    scanf("%d", &m);
     // printf("hello world");
     int a[100];
     char b[] = "hello world";
@@ -26,10 +28,11 @@ int main()
 void Process(int *p, int m, int n)
 {
     int i;
+    int h = 0;
     int count = 0;
     int sum = 0;
 
-    printf("出局顺序为： ");
+    printf("出局顺序为： \n");
     //以出局的人数作为循环条件
     while (count < n)
     {
@@ -40,8 +43,16 @@ void Process(int *p, int m, int n)
 
         if (sum == m)
         {
-            printf("%d ", *(p + i)); // 输出出局的人位置
-            sum = 0; // 记数君重新归零
+            
+            printf("%2d ", *(p + i)); // 输出出局的人位置
+            h++;
+            if (h == 10)
+            {
+                putchar('\n');
+                h = 0;
+            }
+
+            sum = 0;       // 记数君重新归零
             *(p + i) = 0;  // 出局的人的值设为0，并输出其位置
             count++; // 增加一个出局人数
         }
