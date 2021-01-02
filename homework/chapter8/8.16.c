@@ -28,14 +28,14 @@ int main()
         
     } */
 
-    for ( i = 0; i < strlen(str); i++)
-    {
-        if (str[i] in num)
-        {               
-            
-        }
+    // for ( i = 0; i < strlen(str); i++)
+    // {
+    //     if (str[i] in num)
+    //     {               
+         
+    //     }
         
-    }
+    // }
     
 
 

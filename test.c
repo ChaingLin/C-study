@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    /* char a[] = "I am happy!";
+    char a[] = "I am happy!";
     char b[20];
     int i;
     for (i = 0; *(a + i) != '\0'; i++)
@@ -15,7 +15,7 @@ int main()
     {
         printf("%c", b[i]);
     }
-    putchar('\n' */);
+    putchar('\n' */)
 
     
     return 0;
