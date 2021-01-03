@@ -38,6 +38,8 @@
 		},
 		"files.associations": {
 			"iostream": "cpp"
-		}
+		},
+		"editor.fontSize": 13,
+		"editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace"
 	}
 }
