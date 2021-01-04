@@ -22,7 +22,11 @@ int main()
     scanf("%d", &m);
 
     p = a; // 这里不可删除， 让p重新指向a[0]
+    for (p = a; p < a + n;)
+        printf("%d ", *p++);
+    putchar('\n');
 
+    p = a;
     move(p, n, m);
 
     for (p = a; p < a + n;)
