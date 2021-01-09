@@ -48,10 +48,24 @@ struct Student *creat(void)
     return (head); 
 }
 
+void print(struct Student *head) // 增加打印功能
+{
+    struct Student *p;
+    p = head;
+    if (head != NULL)
+    {
+        do
+        {
+            printf("\nnum:%ld\nscore:%5.lf\n", p->num, p->score);
+            p = p->next;
+        } while (p != NULL);
+    }
+    
+}
 int main()
 {
-    struct Student *pt;
-    pt = creat();
-    printf("\nnum:%ld\nscore:%5.lf\n", pt->num, pt->score);
+    struct Student *head;
+    head = creat();
+    print(head);
     return 0;
 }
